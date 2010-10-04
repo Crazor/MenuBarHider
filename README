@@ -1,0 +1,13 @@
+MenuBarHider is a SIMBL plugin that loads into every Cocoa application you run and sets your Mac's Menu Bar to auto-hide itself, just like the Dock. When you move your mouse to the upper screen edge, it will reappear.
+
+I've only tested the plugin on Snow Leopard, but it should work on Leopard and maybe earlier, too, as I use a standard Carbon API call to hide the Menu Bar.
+
+There will be a short flicker when switching between applications, since the Menu Bar appears for a brief moment, but I think there is no way to work around this.
+
+Also this plugin will do nothing to Carbon-based applications.
+
+Right now, the plugin will only set the Menu Bar to auto-hide when an application launches. If an application itself switches between auto-hide and normal mode, you may get stuck with the menu bar always showing up for this particular application until you restart it. I'll try working around this if it annoys me too much.
+
+There seems to be a problem with Spotlight where you can't access it via it's Menu Bar icon. Finder's search box is not affected, though. This is a bug in Mac OS X itself that will affect every application that sets the Menu Bar to auto-hide.
+
+To install this plugin, either clone the git repository and use XCode to build the bundle, or get a precompiled bundle from the downloads section on GitHub. Then put the bundle into "~/Library/Application Support/SIMBL/Plugins". If you had installed SIMBL before, just restart your applications. If you don't have SIMBL yet, get it from http://www.culater.net/software/SIMBL/SIMBL.php and follow the instructions there to install. After installing SIMBL, don't forget to log out so that SIMBL gets loaded.
