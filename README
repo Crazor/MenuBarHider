@@ -4,9 +4,7 @@ I've only tested the plugin on Snow Leopard, but it should work on Leopard and m
 
 There will be a short flicker when switching between applications, since the Menu Bar appears for a brief moment, but I think there is no way to work around this.
 
-Also this plugin will do nothing to Carbon-based applications.
-
-Right now, the plugin will only set the Menu Bar to auto-hide when an application launches. If an application itself switches between auto-hide and normal mode, you may get stuck with the menu bar always showing up for this particular application until you restart it. I'll try working around this if it annoys me too much.
+Also this plugin will do nothing to Carbon-based applications, since SIMBL will only inject code into Cocoa applications.
 
 There seems to be a problem with Spotlight where you can't access it via it's Menu Bar icon. Finder's search box is not affected, though. This is a bug in Mac OS X itself that will affect every application that sets the Menu Bar to auto-hide.
 
