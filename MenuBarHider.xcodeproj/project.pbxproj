@@ -170,6 +170,7 @@
 				INFOPLIST_FILE = Info.plist;
 				INSTALL_PATH = "$(HOME)/Library/Bundles";
 				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = "-DDEBUG=1";
 				PRODUCT_NAME = MenuBarHider;
 				VALID_ARCHS = "x86_64 i386";
 				WRAPPER_EXTENSION = bundle;
