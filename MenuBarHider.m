@@ -1,6 +1,18 @@
 #import "MenuBarHider.h"
 
+#import "JRSwizzle/JRSwizzle.h"
 #import <Carbon/Carbon.h>
+
+@interface NSScreen (MenuBarHider)
+- (NSRect)myVisibleFrame;
+@end
+
+@implementation NSScreen (MenuBarHider)
+- (NSRect)myVisibleFrame
+{
+    return [self frame];
+}
+@end
 
 @implementation MenuBarHider
 
@@ -17,6 +29,8 @@ static MenuBarHider *sharedInstance;
 										   options:(NSKeyValueObservingOptionNew
 													| NSKeyValueObservingOptionOld)
 										   context:NULL];
+        
+    [NSScreen jr_swizzleMethod:@selector(visibleFrame) withMethod:@selector(myVisibleFrame) error:NULL];
 }
 
 + (void)initialize
@@ -59,5 +73,7 @@ static MenuBarHider *sharedInstance;
 		SetSystemUIMode(kUIModeAllSuppressed, 0);
 	}
 }
+
+
 
 @end
