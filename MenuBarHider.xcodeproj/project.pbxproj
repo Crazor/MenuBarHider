@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6EA0828212560D4F00FCE781 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA0828112560D4F00FCE781 /* Carbon.framework */; };
+		6EE0BF8C13392F5200DD5FA2 /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EE0BF8B13392F5200DD5FA2 /* JRSwizzle.m */; };
 		6EEBE1A011A55B9F007384BE /* MenuBarHider.m in Sources */ = {isa = PBXBuildFile; fileRef = 6EEBE19F11A55B9F007384BE /* MenuBarHider.m */; };
 		6EEBE1CF11A55F96007384BE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EEBE1CE11A55F96007384BE /* Cocoa.framework */; };
 		8D576314048677EA00EA77CD /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */; };
@@ -18,6 +19,8 @@
 		089C167EFE841241C02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		0AA1909FFE8422F4C02AAC07 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = /System/Library/Frameworks/CoreFoundation.framework; sourceTree = "<absolute>"; };
 		6EA0828112560D4F00FCE781 /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = /System/Library/Frameworks/Carbon.framework; sourceTree = "<absolute>"; };
+		6EE0BF8A13392F5200DD5FA2 /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JRSwizzle.h; path = JRSwizzle/JRSwizzle.h; sourceTree = "<group>"; };
+		6EE0BF8B13392F5200DD5FA2 /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JRSwizzle.m; path = JRSwizzle/JRSwizzle.m; sourceTree = "<group>"; };
 		6EEBE19E11A55B9F007384BE /* MenuBarHider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuBarHider.h; sourceTree = "<group>"; };
 		6EEBE19F11A55B9F007384BE /* MenuBarHider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuBarHider.m; sourceTree = "<group>"; };
 		6EEBE1CE11A55F96007384BE /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -74,6 +77,8 @@
 		08FB77AFFE84173DC02AAC07 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				6EE0BF8A13392F5200DD5FA2 /* JRSwizzle.h */,
+				6EE0BF8B13392F5200DD5FA2 /* JRSwizzle.m */,
 			);
 			name = Source;
 			sourceTree = "<group>";
@@ -114,7 +119,11 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB911E08733D790010E9CD /* Build configuration list for PBXProject "MenuBarHider" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
+			knownRegions = (
+				en,
+			);
 			mainGroup = 089C166AFE841209C02AAC07 /* SimblTest */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -141,6 +150,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6EEBE1A011A55B9F007384BE /* MenuBarHider.m in Sources */,
+				6EE0BF8C13392F5200DD5FA2 /* JRSwizzle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
