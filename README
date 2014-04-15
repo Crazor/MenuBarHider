@@ -1,13 +1,9 @@
 MenuBarHider is a SIMBL plugin that loads into every Cocoa application you run and sets your Mac's Menu Bar to auto-hide itself, just like the Dock. When you move your mouse to the upper screen edge, it will reappear.
 
-I've only tested the plugin on Snow Leopard, but it should work on Leopard and maybe earlier, too, as I use a standard Carbon API call to hide the Menu Bar.
+The plugin is tested on Mavericks. The deployment target is set to 10.5, so this should work on Leopard or newer. Note that I can't test the plugin on older OS X releases. Your feedback (in the form of an issue report) is appreciated.
 
-There will be a short flicker when switching between applications, since the Menu Bar appears for a brief moment, but I think there is no way to work around this.
+This plugin will do nothing to Carbon-based applications, since SIMBL will only inject code into Cocoa applications. I haven't seen a Carbon application in a long time, though.
 
-Also this plugin will do nothing to Carbon-based applications, since SIMBL will only inject code into Cocoa applications.
+To install this plugin, either clone the git repository and use XCode to build the bundle, or get a precompiled bundle from the downloads section on GitHub. Then put the bundle into "~/Library/Application Support/SIMBL/Plugins". If you had installed EasySIMBL before, just restart your applications. If you don't have EasySIMBL on your machine yet, get it from https://github.com/norio-nomura/EasySIMBL and follow the instructions there to install.
 
-There seems to be a problem with Spotlight where you can't access it via it's Menu Bar icon. Finder's search box is not affected, though. This is a bug in Mac OS X itself that will affect every application that sets the Menu Bar to auto-hide.
-
-To install this plugin, either clone the git repository and use XCode to build the bundle, or get a precompiled bundle from the downloads section on GitHub. Then put the bundle into "~/Library/Application Support/SIMBL/Plugins". If you had installed SIMBL before, just restart your applications. If you don't have SIMBL yet, get it from http://www.culater.net/software/SIMBL/SIMBL.php and follow the instructions there to install. After installing SIMBL, don't forget to log out so that SIMBL gets loaded.
-
-There is an issue with sandboxed apps, like Chrome, Preview, TextEdit etc. If MenuBarHider doesn't work with a Cocoa application, check if it is sandboxed: Open Activity Monitor, right-click the list view's headers and make sure that  "Sandbox" is checked. Then look for the application in question (use the filter field at the top-right) and check wether it is sandboxed. If it is, install Afloat 2.4 on your system! It contains an agent called "SIMBL Enabler for Sandboxed Apps" (living in ~/Library/Application Support/Afloat) that watches ~/Library/Containers and hardlinks ~/Library/Application Support/SIMBL/Plugins into every sandbox container. If you don't want to use Afloat, remove it from ~/Library/Application Support/SIMBL/Plugins, but leave the Enabler in place.
+Note that I recommend to use EasySIMBL, since it includes a workaround for sandboxed applications, like Google Chrome. The previous workaround using Afloat is not recommended any more.
