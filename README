@@ -6,4 +6,4 @@ This plugin will do nothing to Carbon-based applications, since SIMBL will only 
 
 To install this plugin, either clone the git repository and use XCode to build the bundle, or get a precompiled bundle from the downloads section on GitHub. Then put the bundle into "~/Library/Application Support/SIMBL/Plugins". If you had installed EasySIMBL before, just restart your applications. If you don't have EasySIMBL on your machine yet, get it from https://github.com/norio-nomura/EasySIMBL and follow the instructions there to install.
 
-Note that I recommend to use EasySIMBL, since it includes a workaround for sandboxed applications, like Google Chrome. The previous workaround using Afloat is not recommended any more.
+Note that I recommend to use EasySIMBL, since it includes a workaround for sandboxed applications. Regarding Google Chrome, please see https://github.com/norio-nomura/EasySIMBL/issues/12.
